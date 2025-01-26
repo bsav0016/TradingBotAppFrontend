@@ -1,20 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import Backtest from './components/backtest';
+import Home from './components/home';
+import Auth from './components/auth';
+import Profile from './components/profile';
+import About from './components/about';
+import Bot from './components/bot'
+import BacktestResults from './components/backtestResults';
+import Instructions from './components/instructions';
+import HowItWorks from './components/instructions/howItWorks';
+import BotInstructions from './components/instructions/botInstructions';
+import BacktestInstructions from './components/instructions/backtestInstructions';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const AppNavigator = createStackNavigator({
+  Auth: {screen: Auth},
+  Home: {screen: Home},
+  Backtest: {screen: Backtest},
+  Profile: {screen: Profile},
+  About: {screen: About},
+  Bot: {screen: Bot},
+  BacktestResults: {screen: BacktestResults},
+  Instructions: {screen: Instructions},
+  HowItWorks: {screen: HowItWorks},
+  BotInstructions: {screen: BotInstructions},
+  BacktestInstructions: {screen: BacktestInstructions}
+})
+
+const App = createAppContainer(AppNavigator)
+
+export default App;

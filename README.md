@@ -2,7 +2,7 @@
 
 Mobile app for back-testing and running indicator-based crypto trading strategies. You pick a coin, a time range and up to three technical indicators, and the app sends the request to a separate backend API and shows how the strategy would have performed.
 
-This is an early Expo prototype. The backend it talks to is not part of this repository.
+This is an early Expo prototype and the repository is archived. It belongs with the AlgoTracker project ([frontend](https://github.com/bsav0016/AlgoTrackerFrontend), [backend](https://github.com/bsav0016/AlgoTrackerBackend)); look there for the maintained version. The backend this app talks to is not part of this repository.
 
 ## What it does
 
